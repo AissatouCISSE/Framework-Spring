@@ -57,5 +57,16 @@ public class VillageController {
 		return  "redirect:/village/liste";
 	}
 	
+	@RequestMapping(value="/village/delete" , method = RequestMethod.GET )
+	public String delete(int id) {
+		try {
+			villagedao.delete(villagedao.getOne(id));
+			villagedao.flush();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return  "redirect:/village/liste";
+	}
+	
 	
 }

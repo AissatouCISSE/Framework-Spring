@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import sn.simplon.senforage.entities.Village;
 
 @Repository
-public interface IVillage <T> extends JpaRepository<Village, Integer> {
+public interface IVillage  extends JpaRepository<Village, Integer> {
 
 }
